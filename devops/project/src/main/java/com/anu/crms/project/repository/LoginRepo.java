@@ -7,6 +7,6 @@ import com.anu.crms.project.domain.Login;
 
 @Repository
 public interface LoginRepo extends JpaRepository<Login , String> {
-    login findByUsernameandPassword(String username, String password);
+    Login findByUsernameandPassword(String username, String password);
 
 }

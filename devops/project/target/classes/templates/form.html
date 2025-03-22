@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: auto;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group div {
+            width: 48%;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #80c4de;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #80c4de;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Book Your Car!</h2>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div>
+                    <label for="license">Driving License:</label>
+                    <input type="file" id="license" name="license" accept=".pdf,.jpg" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="pickup_date">Pick-up Date:</label>
+                    <input type="date" id="pickup_date" name="pickup_date" required>
+                </div>
+                <div>
+                    <label for="dropoff_date">Drop-off Date:</label>
+                    <input type="date" id="dropoff_date" name="dropoff_date" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="pickup_time">Pick-up Time:</label>
+                    <input type="time" id="pickup_time" name="pickup_time" required>
+                </div>
+                <div>
+                    <label for="dropoff_time">Drop-off Time:</label>
+                    <input type="time" id="dropoff_time" name="dropoff_time" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="pickup_location">Pickup Location:</label>
+                    <select id="pickup_location" name="pickup_location" required>
+                        <option value="">Select Pickup Location</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="dropoff_location">Drop-off Location:</label>
+                    <select id="dropoff_location" name="dropoff_location" required>
+                        <option value="">Select Drop-off Location</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div>
+                    <label for="zipcode">Zipcode:</label>
+                    <input type="text" id="zipcode" name="zipcode" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="city">City:</label>
+                    <select id="city" name="city" required>
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="state">State:</label>
+                    <select id="state" name="state" required>
+                        <option value="">Select State</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit">Proceed to Pay</button>
+        </form>
+    </div>
+</body>
+</html>

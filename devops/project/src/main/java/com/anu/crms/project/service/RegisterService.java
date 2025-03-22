@@ -3,6 +3,7 @@ package com.anu.crms.project.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.anu.crms.project.domain.Login;
 import com.anu.crms.project.repository.registerrepo;
 
 @Service
@@ -13,7 +14,7 @@ public class RegisterService {
         if(repo.findByUsername(username)!=null){
             return false;
         }
-        Login newuser = new Login(username.password);
+        Login newuser = new Login(username,password);
         repo.save(newuser);
         return true;
 

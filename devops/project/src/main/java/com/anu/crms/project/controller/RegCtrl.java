@@ -9,28 +9,31 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.anu.crms.project.service.RegisterService;
 
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 
 
 @Controller
 public class RegCtrl {
     @Autowired
-    private RegisterService register;
+    private RegisterService regser;
     @GetMapping("/register")
     public String showregregisterpage() {
         return "register";
     }
     @PostMapping("/register")
     public String postMethodName(@RequestParam String username,@RequestParam String password,Model mod) {
-        //TODO: process POST request
         
         boolean isregistered = regser.register(username,password);
         if(isregistered)
         {
             mod.addAttribute("message","Registration Successful");
             return "register";
-        }    
+        }   
+        else
+        {
+            mod.addAttribute("error","Username already exists");
+            return "register";
+        }
     }
     
 }

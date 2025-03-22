@@ -5,8 +5,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.anu.crms.project.domain.Login;
+import com.anu.crms.project.service.LoginService;
+
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 
 
@@ -27,11 +30,11 @@ public String postLoginpage(@RequestParam String username,@RequestParam String p
     }
     else
     {
-        mod.addAttribute(attributename:"error",);
+        mod.addAttribute("error","Invalid username or password");
         return "login";
     }
     
-    return entity;
+    
 }
 
 

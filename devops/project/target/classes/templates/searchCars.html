@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+/* Search bar styling */
+#search {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* 2x2 Grid layout with proper spacing */
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 40px; /* Increased gap between cards */
+    width: 100%;
+    max-width: 850px; /* Slightly increased width */
+    padding: 10px; /* Adds space around the grid */
+}
+
+/* Car card styling - Equal Size */
+.car-card {
+    width: 400px;
+    height: 350px; /* Fixed height */
+    background: white;
+    padding: 30px; /* Increased padding */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Car Name Styling */
+.car-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Car card image */
+.car-card img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Favorite button */
+.favorite {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.favorite:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .car-list {
+        grid-template-columns: 1fr; /* Switch to 1 column on smaller screens */
+        gap: 20px; /* Adjusted gap for smaller screens */
+    }
+    
+    .car-card {
+        height: 280px; /* Adjusted for mobile */
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .car-card img {
+        width: 140px;
+        height: 90px;
+    }
+
+    .favorite {
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="search" placeholder="Search for results">
+        <div class="car-list">
+            <div class="car-card" style="background-color: #b38b7d;">
+                <h3>Hyundai</h3>
+                <img src="hyundai.jpg" alt="Hyundai">
+                <button class="favorite">☆</button>
+            </div>
+            <div class="car-card" style="background-color: #80c4de;">
+                <h3>Tata</h3>
+                <img src="tata.jpg" alt="Tata">
+                <button class="favorite">☆</button>
+            </div>
+            <div class="car-card" style="background-color: #e57373;">
+                <h3>Toyota</h3>
+                <img src="toyota.avif" alt="Toyota">
+                <button class="favorite">☆</button>
+            </div>
+            <div class="car-card" style="background-color: #9b8acb;">
+                <h3>Classic Nissan MotorCar</h3>
+                <img src="nissan.jpg" alt="Nissan">
+                <button class="favorite">☆</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
